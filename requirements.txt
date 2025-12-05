@@ -1,0 +1,4 @@
+boto3
+paramiko
+psycopg2-binary
+tox

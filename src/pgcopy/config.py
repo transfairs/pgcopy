@@ -1,0 +1,12 @@
+ssh_host = "xxx.xxx.xxx.xxx"
+ssh_user = "ec2-user"
+ssh_fingerprint = ""
+region = "ap-southeast-2"
+source_schema = "snapshot"
+target_env = "dev"
+db_prefix = "db"
+sm_prefix = "company/database/"
+
+source = "aws_source/postgresAdmin"
+db_1 = "aws_db_1/postgresAdmin"
+db_2 = "aws_db_2/postgresAdmin"

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "postgres-copy"
+version = "0.1.0"
+description = "Data copy utilities using PostgreSQL dblink, SSH tunnelling and AWS secrets."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "transfairs" }
+]
+dependencies = []
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+precision = 1
+
+[tool.black]
+line-length = 79
+target-version = ["py312"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.tox
+  | venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 79
+src_paths = ["src", "tests"]
